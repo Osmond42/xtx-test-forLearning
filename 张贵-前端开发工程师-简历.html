@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>张贵 - 前端开发工程师简历</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .resume {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 40px 50px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #2c3e50;
+            margin-bottom: 25px;
+        }
+        
+        .header h1 {
+            font-size: 28px;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .header .subtitle {
+            font-size: 16px;
+            color: #7f8c8d;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 13px;
+        }
+        
+        .contact-info span {
+            color: #555;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        .section-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #2c3e50;
+            padding: 8px 15px;
+            background-color: #ecf0f1;
+            margin-bottom: 15px;
+            border-left: 4px solid #3498db;
+        }
+        
+        .intent-table {
+            display: flex;
+            gap: 40px;
+            padding: 10px 0;
+        }
+        
+        .intent-item {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .intent-item label {
+            color: #7f8c8d;
+        }
+        
+        .intent-item span {
+            font-weight: 500;
+        }
+        
+        .education {
+            padding: 10px 0;
+        }
+        
+        .education-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .education-time {
+            color: #3498db;
+            font-weight: 500;
+        }
+        
+        .work-item {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed #ddd;
+        }
+        
+        .work-item:last-child {
+            border-bottom: none;
+        }
+        
+        .work-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .work-header h3 {
+            font-size: 15px;
+            color: #2c3e50;
+        }
+        
+        .work-header .position {
+            color: #3498db;
+            font-size: 13px;
+        }
+        
+        .work-header .time {
+            color: #7f8c8d;
+            font-size: 13px;
+        }
+        
+        .work-desc {
+            color: #555;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .work-list {
+            padding-left: 20px;
+            color: #666;
+        }
+        
+        .work-list li {
+            margin-bottom: 5px;
+        }
+        
+        .project-item {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .project-item:last-child {
+            border-bottom: none;
+        }
+        
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .project-header h3 {
+            font-size: 15px;
+            color: #2c3e50;
+        }
+        
+        .project-header .role {
+            color: #3498db;
+            font-size: 13px;
+        }
+        
+        .project-header .time {
+            color: #7f8c8d;
+            font-size: 13px;
+        }
+        
+        .project-desc {
+            background-color: #f8f9fa;
+            padding: 10px 15px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+            color: #555;
+            font-size: 13px;
+        }
+        
+        .project-section-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin: 12px 0 8px 0;
+            font-size: 13px;
+        }
+        
+        .project-list {
+            padding-left: 20px;
+            color: #555;
+            font-size: 13px;
+        }
+        
+        .project-list li {
+            margin-bottom: 4px;
+        }
+        
+        .project-tools {
+            margin-top: 10px;
+            font-size: 12px;
+        }
+        
+        .project-tools label {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        
+        .project-tools span {
+            color: #3498db;
+        }
+        
+        .skills-category {
+            margin-bottom: 15px;
+        }
+        
+        .skills-category h4 {
+            font-size: 14px;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            padding-left: 10px;
+            border-left: 3px solid #3498db;
+        }
+        
+        .skills-list {
+            padding-left: 20px;
+            color: #555;
+            font-size: 13px;
+        }
+        
+        .skills-list li {
+            margin-bottom: 4px;
+        }
+        
+        .evaluation-list {
+            padding-left: 20px;
+            color: #555;
+        }
+        
+        .evaluation-list li {
+            margin-bottom: 6px;
+        }
+        
+        @media print {
+            body {
+                background-color: #fff;
+                padding: 0;
+            }
+            
+            .resume {
+                box-shadow: none;
+                padding: 20px 30px;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+            
+            .project-item {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume">
+        <!-- 头部信息 -->
+        <div class="header">
+            <h1>张贵</h1>
+            <div class="subtitle">前端开发工程师</div>
+            <div class="contact-info">
+                <span>📱 17705050751</span>
+                <span>📧 zhangosmond@foxmail.com</span>
+                <span>👤 男 / 27岁</span>
+            </div>
+        </div>
+        
+        <!-- 求职意向 -->
+        <div class="section">
+            <div class="section-title">求职意向</div>
+            <div class="intent-table">
+                <div class="intent-item">
+                    <label>意向岗位：</label>
+                    <span>前端开发工程师</span>
+                </div>
+                <div class="intent-item">
+                    <label>意向城市：</label>
+                    <span>北京</span>
+                </div>
+                <div class="intent-item">
+                    <label>期望薪资：</label>
+                    <span>18K-25K</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 教育经历 -->
+        <div class="section">
+            <div class="section-title">教育经历</div>
+            <div class="education">
+                <div class="education-item">
+                    <span class="education-time">2016.09 - 2020.06</span>
+                    <span>泉州师范学院</span>
+                    <span>海洋技术</span>
+                    <span>本科</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 工作经历 -->
+        <div class="section">
+            <div class="section-title">工作经历</div>
+            
+            <div class="work-item">
+                <div class="work-header">
+                    <h3>中国铁路科学研究院 <span class="position">| 前端开发</span></h3>
+                    <span class="time">2024.10 - 至今</span>
+                </div>
+                <div class="work-desc">负责铁路2.0平台及相关基础设施平台的升级开发工作</div>
+                <div class="work-desc">独立负责多个业务模块及系统的前端架构设计与开发工作</div>
+                <div class="work-desc">参与20+平台项目的前端页面搭建、编写、调试、部署、上线等</div>
+                <div class="work-desc">涵盖基础数据平台、信创项目、新藏/西藏党群项目、北京局铁路建设项目、联络线项目、工程管理系统、各分公司门户项目、中吉乌铁路建设项目等</div>
+                <ul class="work-list">
+                    <li>主导项目技术选型与微前端架构搭建，实现多个子系统的独立开发与部署</li>
+                    <li>负责Web端、小程序及独立APP的前端开发工作</li>
+                    <li>搭建前端CI/CD自动化流水线，实现代码检查、测试、构建、部署的全流程自动化</li>
+                    <li>使用Docker进行项目容器化部署，编写Dockerfile和docker-compose配置</li>
+                    <li>引入AI辅助开发工具，提升单元测试覆盖率和代码审查效率</li>
+                    <li>搭建团队内部技术知识库，集成RAG技术实现智能问答功能</li>
+                    <li>开发MCP Server扩展AI Agent能力，实现内部系统的智能化调用</li>
+                </ul>
+            </div>
+            
+            <div class="work-item">
+                <div class="work-header">
+                    <h3>亚信科技 <span class="position">| 前端开发</span></h3>
+                    <span class="time">2023.06 - 2024.10</span>
+                </div>
+                <div class="work-desc">负责与三大运营商对接项目实际需求，负责与政府对接实际项目需求</div>
+                <div class="work-desc">参与10+大中项目前端页面搭建、编写、调试、部署、上线等</div>
+                <div class="work-desc">涵盖应急平台、全国及各省市文旅专题项目、央视大数据支撑项目、数字政府项目、外勤监控项目、人流感知平台、智慧反诈平台等</div>
+                <ul class="work-list">
+                    <li>快速建立项目架构，完成技术选型和框架搭建</li>
+                    <li>负责数据可视化大屏开发，使用ECharts、Three.js实现3D可视化效果</li>
+                    <li>对接高德地图、腾讯地图API，实现轨迹回放、热力图、电子围栏等WebGIS功能</li>
+                    <li>负责视频监控模块开发，对接海康威视SDK实现实时视频流播放</li>
+                </ul>
+            </div>
+            
+            <div class="work-item">
+                <div class="work-header">
+                    <h3>福建术艺网络科技有限责任公司 <span class="position">| 前端开发</span></h3>
+                    <span class="time">2021.06 - 2023.04</span>
+                </div>
+                <div class="work-desc">负责网站PC端、小程序界面开发</div>
+                <ul class="work-list">
+                    <li>根据项目需求和UI的设计稿完成页面开发和交互效果实现</li>
+                    <li>快速实现页面布局，保证代码规范性和可维护性</li>
+                    <li>参与项目需求评审，与产品、UI、后端进行有效沟通协作</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- 项目经历 -->
+        <div class="section">
+            <div class="section-title">项目经历</div>
+            
+            <!-- 项目1 -->
+            <div class="project-item">
+                <div class="project-header">
+                    <h3>铁路工程管理系统 <span class="role">| 前端开发</span></h3>
+                    <span class="time">2024.10 - 至今</span>
+                </div>
+                <div class="project-desc">
+                    <strong>项目描述：</strong>铁路工程管理系统是支撑全国铁路建设项目管理的核心平台，包含项目管理、合同管理、进度管理、质量管理、安全管理、档案管理等20+业务模块，服务于全国多个铁路局的日常业务运转。
+                </div>
+                <div class="project-section-title">责任描述：</div>
+                <ol class="project-list">
+                    <li>主导系统前端架构设计，采用qiankun微前端架构，将系统拆分为多个独立子应用，实现独立开发、独立部署、独立升级</li>
+                    <li>设计并开发统一的前端基础设施层，包括UI组件库（50+业务组件）、工具函数库、统一权限管理方案、全局状态管理、请求层封装等</li>
+                    <li>负责项目进度甘特图模块开发，支持拖拽调整工期、依赖关系连线、里程碑标注、关键路径高亮、大数据量虚拟滚动</li>
+                    <li>开发工程量清单树形表格，支持无限层级树结构、行内编辑、公式计算、批量操作</li>
+                    <li>负责在线审批流程模块开发，实现可视化流程图展示、表单动态渲染、审批意见、附件上传、流转记录等功能</li>
+                    <li>针对大数据量表格（10万行×50列）进行虚拟滚动优化，针对复杂表单（200+字段）进行动态表单引擎开发</li>
+                    <li>搭建前端CI/CD流水线，实现ESLint检查、单元测试、构建打包、Docker镜像构建与部署的全流程自动化</li>
+                </ol>
+                <div class="project-section-title">技术描述：</div>
+                <ol class="project-list">
+                    <li>使用Vue3 + TypeScript作为主技术栈，利用Composition API提高代码的复用性和可读性</li>
+                    <li>使用qiankun搭建微前端架构，主应用负责导航、权限、全局状态，各子应用独立开发部署</li>
+                    <li>使用Vite作为构建工具，配置多环境构建，优化开发体验和构建速度</li>
+                    <li>开发统一组件库（基于Element Plus二次封装），通过npm私有仓库发布供各子应用使用</li>
+                    <li>设计RBAC+数据权限的综合权限方案，支持菜单权限、按钮权限、数据权限的细粒度控制</li>
+                    <li>使用vue-virtual-scroller实现大数据量表格的虚拟滚动，支撑10万行数据的流畅展示</li>
+                    <li>开发动态表单引擎，通过JSON Schema配置生成复杂表单，支持字段联动、条件显隐、复杂校验规则</li>
+                    <li>实现大文件分片上传、断点续传、秒传功能，支持GB级文件的稳定上传</li>
+                    <li>使用Web Worker处理复杂计算任务，避免阻塞主线程</li>
+                    <li>使用Docker进行项目容器化，编写Dockerfile实现多阶段构建，优化镜像体积</li>
+                    <li>配置GitLab CI流水线，实现代码提交后自动lint、test、build、deploy</li>
+                    <li>集成Sentry进行错误监控，配置SourceMap实现错误堆栈的源码定位</li>
+                </ol>
+                <div class="project-tools">
+                    <label>开发工具：</label>
+                    <span>Vue3、TypeScript、qiankun、Vite、Element Plus、Vuex/Pinia、Vue Router、Docker、GitLab CI、Sentry、虚拟滚动、JSON Schema</span>
+                </div>
+            </div>
+            
+            <!-- 项目2 -->
+            <div class="project-item">
+                <div class="project-header">
+                    <h3>铁路智能知识库系统 <span class="role">| 前端开发</span></h3>
+                    <span class="time">2024.12 - 至今</span>
+                </div>
+                <div class="project-desc">
+                    <strong>项目描述：</strong>基于RAG技术搭建的铁路行业智能知识库系统，整合铁路建设规范、技术标准、项目文档等知识资源，为员工提供智能检索和问答服务。
+                </div>
+                <div class="project-section-title">责任描述：</div>
+                <ol class="project-list">
+                    <li>负责知识库系统的前端架构设计与核心模块开发</li>
+                    <li>开发智能问答界面，支持多轮对话、流式输出、答案来源引用展示、反馈收集等功能</li>
+                    <li>开发文档管理模块，支持文档上传、分类管理、权限控制、版本管理等功能</li>
+                    <li>开发MCP Server扩展AI能力，将内部API和数据库封装成MCP工具供AI调用</li>
+                    <li>集成AI代码审查工具，配置PR自动触发AI审查，提升代码质量</li>
+                </ol>
+                <div class="project-section-title">技术描述：</div>
+                <ol class="project-list">
+                    <li>使用React + TypeScript开发前端界面，使用Ant Design组件库</li>
+                    <li>使用SSE（Server-Sent Events）实现流式输出，提供打字机效果的回答展示</li>
+                    <li>基于LangChain框架实现RAG检索增强生成，使用向量数据库存储文档向量</li>
+                    <li>开发MCP Server，使用TypeScript基于@modelcontextprotocol/sdk实现</li>
+                    <li>集成CodeRabbit进行AI代码审查，配置审查规则和质量门禁</li>
+                    <li>使用GitHub Copilot/通义灵码辅助开发，使用AI生成单元测试提升覆盖率</li>
+                </ol>
+                <div class="project-tools">
+                    <label>开发工具：</label>
+                    <span>React、TypeScript、Ant Design、SSE、LangChain、MCP Protocol、CodeRabbit、GitHub Copilot</span>
+                </div>
+            </div>
+            
+            <!-- 项目3 -->
+            <div class="project-item">
+                <div class="project-header">
+                    <h3>外勤人员管理平台 <span class="role">| 前端开发</span></h3>
+                    <span class="time">2024.03 - 2024.10</span>
+                </div>
+                <div class="project-desc">
+                    <strong>项目描述：</strong>为中移动及其伙伴公司定制化开发的外勤工作人员管理系统，可提供人员调整、查看、定位、短信通知、围栏预警等功能。
+                </div>
+                <div class="project-section-title">责任描述：</div>
+                <ol class="project-list">
+                    <li>负责外勤人员管理系统管理端、用户端、企业定制版的开发</li>
+                    <li>开发电子围栏功能，支持在地图上绑制多边形、圆形、矩形围栏</li>
+                    <li>开发轨迹回放功能，支持历史轨迹查询、轨迹动画播放、播放速度调节、停留点识别</li>
+                    <li>开发实时定位功能，使用WebSocket实现人员位置的实时更新</li>
+                    <li>开发海量点位展示功能，通过点聚合技术实现万级点位的流畅展示</li>
+                </ol>
+                <div class="project-section-title">技术描述：</div>
+                <ol class="project-list">
+                    <li>使用Create React App搭建项目结构，结合HTML5和CSS3设计页面布局和样式</li>
+                    <li>集成React Router实现前端路由，使用路由守卫控制用户访问权限</li>
+                    <li>使用Axios封装HTTP请求，添加请求和响应拦截器，统一处理API请求</li>
+                    <li>引入Ant Design组件库，快速构建页面组件，提升开发效率</li>
+                    <li>使用Recharts嵌入多个图表展示数据，动态渲染图表内容</li>
+                    <li>通过React Context API管理全局状态，实现跨组件的数据共享与传递</li>
+                    <li>使用高德地图JS API进行地理位置的展示和数据可视化</li>
+                    <li>使用高德地图MouseTool实现围栏绑制，使用MarkerCluster实现点聚合</li>
+                    <li>使用Turf.js进行前端空间计算，实现点在面内判断、距离计算等GIS功能</li>
+                    <li>使用WebSocket实现实时位置更新，配置断线自动重连机制</li>
+                </ol>
+                <div class="project-tools">
+                    <label>开发工具：</label>
+                    <span>React、高德地图JS API、React Router、Axios、Ant Design、Recharts、Turf.js、WebSocket</span>
+                </div>
+            </div>
+            
+            <!-- 项目4 -->
+            <div class="project-item">
+                <div class="project-header">
+                    <h3>央视节假日支撑项目 <span class="role">| 前端开发</span></h3>
+                    <span class="time">2023.08 - 2024.02</span>
+                </div>
+                <div class="project-desc">
+                    <strong>项目描述：</strong>为央视提供节日相关的数据支持，通过对旅游、目的地、出游地、返乡、APP使用频率等数据进行可视化处理和展示，为央视的采访播出提供数据支撑。
+                </div>
+                <div class="project-section-title">责任描述：</div>
+                <ol class="project-list">
+                    <li>负责节前、节中、节后央视采访数据大屏的页面编写</li>
+                    <li>开发3D地球可视化效果，实现全国各省市的数据飞线动画、热力分布展示</li>
+                    <li>开发3D城市场景，展示重点城市的旅游热度、人流分布等数据</li>
+                    <li>负责大屏的自适应布局，支持不同分辨率屏幕的完美展示</li>
+                    <li>优化3D场景的加载性能和渲染帧率，确保大屏展示流畅无卡顿</li>
+                </ol>
+                <div class="project-section-title">技术描述：</div>
+                <ol class="project-list">
+                    <li>使用Vue3框架，利用其提供的Composition API，提高代码的复用性和可读性</li>
+                    <li>使用Vite作为构建工具，提高项目的开发和编译速度</li>
+                    <li>使用高德地图JS API和高德地图可视化API进行地理位置的展示和数据可视化</li>
+                    <li>使用Vue Router进行页面路由管理，利用Vuex进行全局状态管理</li>
+                    <li>使用Element Plus UI框架进行页面布局和组件设计</li>
+                    <li>运用ECharts进行数据可视化，包括词云图、水滴图、环形图等多种图表类型</li>
+                    <li>使用Three.js构建交互式的3D场景，实现3D地球、飞线动画、光柱效果等</li>
+                    <li>使用Three.js的GLTFLoader加载3D模型，配置PBR材质和光照效果</li>
+                    <li>通过requestAnimationFrame优化渲染循环，确保60FPS流畅运行</li>
+                    <li>使用GSAP实现平滑的相机动画和元素过渡效果</li>
+                    <li>使用Jscrambler进行JavaScript混淆加密，提高项目的安全性</li>
+                    <li>使用rem+vw实现大屏的自适应布局，适配不同分辨率</li>
+                </ol>
+                <div class="project-tools">
+                    <label>开发工具：</label>
+                    <span>Vue3、Vite、高德地图JS API、Three.js、GLTFLoader、GSAP、Vue Router、Vuex、Element Plus、ECharts、SCSS</span>
+                </div>
+            </div>
+            
+            <!-- 项目5 -->
+            <div class="project-item">
+                <div class="project-header">
+                    <h3>梧桐逍遥游小程序 <span class="role">| 前端开发</span></h3>
+                    <span class="time">2023.06 - 2023.08</span>
+                </div>
+                <div class="project-desc">
+                    <strong>项目描述：</strong>梧桐逍遥游是一款文旅类微信小程序，为用户提供景区人流数据查询、景区排行榜、游玩攻略定制、周边景点推荐等服务。
+                </div>
+                <div class="project-section-title">责任描述：</div>
+                <ol class="project-list">
+                    <li>负责项目技术选型与框架搭建，项目整体开发，包含首页、地图页、个人信息页开发</li>
+                    <li>首页可实现根据城市展示实时人流数据、景区排行榜、游玩建议、景区搜索等功能</li>
+                    <li>地图页面可展示用户当前定位周边景区热力数据，并展示附近景点位置与简介信息</li>
+                    <li>个人信息页可展示收藏景点、个人攻略查看与定制、隐私协议及个性化设置等功能</li>
+                    <li>登录页面开发，支持微信一键登录和手机号登录</li>
+                </ol>
+                <div class="project-section-title">技术描述：</div>
+                <ol class="project-list">
+                    <li>使用uni-app框架搭建微信小程序项目结构</li>
+                    <li>集成uni-app自带的路由系统，实现小程序页面间的导航和跳转</li>
+                    <li>使用uni.request封装HTTP请求，添加请求和响应拦截器</li>
+                    <li>引入Vant Weapp UI组件库，快速构建页面组件</li>
+                    <li>使用ECharts嵌入多个图表展示数据</li>
+                    <li>通过Vuex管理全局状态，实现跨组件的数据共享</li>
+                    <li>使用腾讯地图小程序SDK进行地理位置的展示和数据可视化</li>
+                    <li>使用uni-app的多端编译特性，实现代码一次编写，多端运行</li>
+                    <li>通过代码分包和懒加载，提升小程序的加载速度和性能表现</li>
+                </ol>
+                <div class="project-tools">
+                    <label>开发工具：</label>
+                    <span>uni-app、Vant Weapp、腾讯地图小程序SDK、ECharts、Vuex</span>
+                </div>
+            </div>
+            
+            <!-- 项目6 -->
+            <div class="project-item">
+                <div class="project-header">
+                    <h3>江西省数字政府项目 <span class="role">| 前端开发</span></h3>
+                    <span class="time">2023.07 - 2023.10</span>
+                </div>
+                <div class="project-desc">
+                    <strong>项目描述：</strong>该项目是江西数字政府的一部分，主要目的是通过数字化手段提高政府服务的效率和便捷性。
+                </div>
+                <div class="project-section-title">责任描述：</div>
+                <ol class="project-list">
+                    <li>负责景区展示、数据可视化、政府职能展示页面的开发</li>
+                    <li>使用高德地图实现景区地理位置的准确展示和定位</li>
+                    <li>利用ECharts进行数据可视化，直观展示政府职能和景区数据</li>
+                    <li>开发数据大屏展示页面，支持多种图表类型和动态数据刷新</li>
+                </ol>
+                <div class="project-section-title">技术描述：</div>
+                <ol class="project-list">
+                    <li>使用Vue3框架，利用Composition API提高代码的复用性和可读性</li>
+                    <li>使用Vue Router进行页面路由管理，利用Vuex进行全局状态管理</li>
+                    <li>使用高德地图JS API实现景区地理位置的展示和定位</li>
+                    <li>利用Axios进行HTTP请求，与后端进行数据交互</li>
+                    <li>运用ECharts进行数据可视化，对政府职能、景区数据等进行图形化展示</li>
+                    <li>使用混淆加密技术保护源代码，提高项目的安全性</li>
+                    <li>利用Vue3的异步组件功能，实现按需加载，优化页面加载速度</li>
+                </ol>
+                <div class="project-tools">
+                    <label>开发工具：</label>
+                    <span>Vue3、Vue Router、Vuex、高德地图JS API、Axios、Vue CLI、ECharts</span>
+                </div>
+            </div>
+            
+            <!-- 项目7 -->
+            <div class="project-item">
+                <div class="project-header">
+                    <h3>阿角美育课程管理后台 <span class="role">| 前端开发</span></h3>
+                    <span class="time">2021.07 - 2022.04</span>
+                </div>
+                <div class="project-desc">
+                    <strong>项目描述：</strong>帮助旗下合作经销商、合作园所管理使用阿角美育平台和课程的后台管理系统，主要功能模块包括权限管理、用户管理、角色管理、课程管理、账号管理、教学数据等。
+                </div>
+                <div class="project-section-title">责任描述：</div>
+                <ol class="project-list">
+                    <li>负责用户管理、角色管理、课程权限等模块实现</li>
+                    <li>与产品、UI沟通实现页面布局及编码规范</li>
+                    <li>与后端对接实现课程列表的渲染、筛选、新增、编辑、删除等功能</li>
+                    <li>实现页面布局，对页面进行组件化封装</li>
+                </ol>
+                <div class="project-section-title">技术描述：</div>
+                <ol class="project-list">
+                    <li>使用Vue CLI + Element UI组件作为开发的技术栈</li>
+                    <li>使用Form表单、Dialog对话框等组件作为主要的开发组件</li>
+                    <li>使用Element UI的分页组件，封装成全局组件</li>
+                    <li>实现下拉框三级联动，使用change事件获取当前id值</li>
+                    <li>使用ECharts实现教学数据的可视化展示</li>
+                    <li>使用Vuex管理用户登录状态和权限信息</li>
+                    <li>使用Vue Router配置路由守卫，实现页面访问权限控制</li>
+                    <li>封装Axios请求拦截器，统一处理请求头Token和错误响应</li>
+                </ol>
+                <div class="project-tools">
+                    <label>开发工具：</label>
+                    <span>Vue、Vue CLI、Element UI、ECharts、Axios、Vuex、Vue Router</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 相关技能 -->
+        <div class="section">
+            <div class="section-title">相关技能</div>
+            
+            <div class="skills-category">
+                <h4>基础技能</h4>
+                <ul class="skills-list">
+                    <li>熟悉移动端流式布局和响应式布局，并配合Flex、rem、vw和媒体查询进行移动端页面适配</li>
+                    <li>熟练使用原生JavaScript，了解原型原型链、继承、异步、作用域闭包等特性</li>
+                    <li>熟练使用ES6+语法，如解构赋值、箭头函数、模块化、Promise、async/await、Class等</li>
+                    <li>熟悉使用Ajax、Axios、Fetch、WebSocket等技术进行前后端数据交互</li>
+                </ul>
+            </div>
+            
+            <div class="skills-category">
+                <h4>框架与工具</h4>
+                <ul class="skills-list">
+                    <li>熟练使用Vue2/Vue3 + Vue Router + Vuex/Pinia + Vue CLI/Vite等Vue全家桶完成项目开发</li>
+                    <li>熟练使用React + React Router + Redux/Context API + Create React App完成项目开发</li>
+                    <li>熟练使用Element UI/Element Plus、Ant Design、Vant等前端UI组件库</li>
+                    <li>熟练使用uni-app进行跨平台开发，支持微信小程序、H5、APP等多端</li>
+                </ul>
+            </div>
+            
+            <div class="skills-category">
+                <h4>数据可视化</h4>
+                <ul class="skills-list">
+                    <li>熟练使用ECharts进行数据可视化，能够实现各类图表的定制和交互</li>
+                    <li>掌握Three.js三维图形库，能够创建3D场景，实现3D地球、飞线动画、3D模型渲染等效果</li>
+                    <li>熟练使用高德地图/腾讯地图API进行WebGIS开发，实现轨迹回放、热力图、电子围栏等功能</li>
+                </ul>
+            </div>
+            
+            <div class="skills-category">
+                <h4>DevOps与工程化</h4>
+                <ul class="skills-list">
+                    <li>熟悉Docker容器化技术，能够编写Dockerfile和docker-compose进行项目容器化部署</li>
+                    <li>熟悉CI/CD流程，能够使用GitLab CI搭建自动化构建部署流水线</li>
+                    <li>熟悉qiankun微前端架构，具备大型复杂系统的架构设计经验</li>
+                    <li>熟悉前端性能优化，包括虚拟滚动、代码分割、懒加载、缓存策略等</li>
+                </ul>
+            </div>
+            
+            <div class="skills-category">
+                <h4>AI相关</h4>
+                <ul class="skills-list">
+                    <li>了解RAG（检索增强生成）技术，具备智能知识库搭建经验</li>
+                    <li>了解MCP（Model Context Protocol）协议，能够开发MCP Server扩展AI能力</li>
+                    <li>熟悉AI辅助开发工具（GitHub Copilot、通义灵码等），能够使用AI提升开发效率</li>
+                    <li>了解AI代码审查工具的集成和使用</li>
+                </ul>
+            </div>
+            
+            <div class="skills-category">
+                <h4>其他技能</h4>
+                <ul class="skills-list">
+                    <li>了解音视频直播技术，熟悉flv.js、hls.js的使用，能够对接海康威视等视频监控设备</li>
+                    <li>熟悉前端监控埋点技术，能够实现错误监控、性能监控、用户行为追踪</li>
+                    <li>熟悉鸿蒙操作系统开发环境，具备鸿蒙应用开发经验</li>
+                    <li>熟练使用PS、AI等图形处理工具</li>
+                    <li>熟悉Git版本控制，了解Git Flow工作流</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- 自我评价 -->
+        <div class="section">
+            <div class="section-title">自我评价</div>
+            <ul class="evaluation-list">
+                <li>5年前端开发经验，参与过20+大中型项目的开发，具备丰富的项目实战经验</li>
+                <li>具备复杂系统的架构设计能力，有微前端架构落地经验</li>
+                <li>对待工作认真负责，责任心强，能够独立完成项目开发</li>
+                <li>有良好的代码书写习惯、学习能力及沟通能力，能较快融入新团队</li>
+                <li>持续关注前端技术发展，经常访问掘金、CSDN等技术社区学习新技术</li>
+                <li>具备DevOps思维，重视开发效率和代码质量，善于使用工具提升团队效能</li>
+                <li>对AI辅助开发有浓厚兴趣，积极探索AI在研发流程中的应用</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
